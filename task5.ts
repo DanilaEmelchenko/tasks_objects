@@ -30,11 +30,14 @@ const store: IStore = {
       title: name,
       price: price,
     };
-    store.products.push(newProduct);
-    return store.products;
+    this.products.push(newProduct);
+    return this.products;
   },
   getTotalValue() {
-    return store.products.reduce((acc, item) => acc + item.price, 0);
+    return this.products.reduce(
+      (acc: number, item: { price: number }) => acc + item.price,
+      0
+    );
   },
 };
 
