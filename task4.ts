@@ -8,7 +8,7 @@ interface IStudent {
   name: string;
   age: number;
   grades: number[];
-  getAverageGrade: () => void;
+  getAverageGrade: () => string;
 }
 
 const student: IStudent = {
